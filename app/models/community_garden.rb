@@ -1,0 +1,2 @@
+class CommunityGarden < ApplicationRecord
+end

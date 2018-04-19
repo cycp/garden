@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Garden: MyString
+  name: MyString
+
+two:
+  Garden: MyString
+  name: MyString
