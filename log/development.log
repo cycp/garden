@@ -3107,6 +3107,7 @@ ActionView::Template::Error (undefined local variable or method `show_path' for 
     4: ) do |b| %>
   
 app/views/plants/show.html.erb:1:in `_app_views_plants_show_html_erb___2507299423825342893_70307829228760'
+<<<<<<< HEAD
 >>>>>>> 8e4d82a1c83a1790f99a6124b8b3d20b780e7b85
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to Garden (20180421201307)
@@ -4270,3 +4271,6 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 111ms (Views: 56.8ms | ActiveRecord: 0.4ms)
 
 
+=======
+>>>>>>> 8e4d82a1c83a1790f99a6124b8b3d20b780e7b85
+>>>>>>> b11fa4c5be70646661db2e2ed683c789523b5d56
