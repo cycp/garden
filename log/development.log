@@ -4717,3 +4717,480 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:32:58 -0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation_links.html.erb (8.6ms)
+  Rendered layouts/_navigation.html.erb (57.0ms)
+Completed 200 OK in 1159ms (Views: 1117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 16:33:05 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (106.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+Completed 200 OK in 250ms (Views: 193.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:33:08 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+Completed 200 OK in 188ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:33:57 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (2.5ms)
+  Rendered layouts/_navigation.html.erb (13.3ms)
+Completed 200 OK in 139ms (Views: 133.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:34:28 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (7.5ms)
+  Rendered layouts/_navigation.html.erb (18.5ms)
+Completed 200 OK in 641ms (Views: 606.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:35:01 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (7.2ms)
+Completed 200 OK in 103ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 16:35:18 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (98.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+Completed 200 OK in 269ms (Views: 228.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 16:35:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 137ms (Views: 134.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 16:36:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dny+FEoxVLvCcKbWPsDv+2wGGVR1KChyy2Nm1OQuWcF9WkqtgQ/U4JoagnjjXJ2D+oG+4VlFWK/KjLS467/P5Q==", "user"=>{"email"=>"2@gm.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "2@gm.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 238ms (ActiveRecord: 2.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dny+FEoxVLvCcKbWPsDv+2wGGVR1KChyy2Nm1OQuWcF9WkqtgQ/U4JoagnjjXJ2D+oG+4VlFWK/KjLS467/P5Q==", "user"=>{"email"=>"2@gm.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (18.3ms)
+Completed 200 OK in 303ms (Views: 151.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-25 16:36:22 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swWDgMoiaD9ykCWz/9E+H26iBedu44tedSJOZxuc+1Jvt325EocGw0kE1P3tmqddkEYAt8zXSvHM/SMtAO6bHg==", "user"=>{"email"=>"2@gm.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "2@gm.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 151ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swWDgMoiaD9ykCWz/9E+H26iBedu44tedSJOZxuc+1Jvt325EocGw0kE1P3tmqddkEYAt8zXSvHM/SMtAO6bHg==", "user"=>{"email"=>"2@gm.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+Completed 200 OK in 215ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-25 16:36:26 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+Completed 200 OK in 99ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 16:36:26 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 122ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-25 16:36:33 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8E19UZzhcKeXEehkmJhed2OIhVHT1F6mZyr7HVoHaorM/mZF4QpVmRxcU6iHUoOHKQKWQrf+FUCjW0gF1X61KQ==", "user"=>{"name"=>"asdf", "email"=>"g@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "g@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name") VALUES (?, ?, ?)[0m  [["email", "g@gmail.com"], ["encrypted_password", "$2a$11$tpyaIlb9HTOvdVrnDRLJeeMi3a40AmONca15D9PzGxhEAdQG5j67W"], ["name", "asdf"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-25 23:36:33.960973"], ["last_sign_in_at", "2018-04-25 23:36:33.960973"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 8]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 234ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:36:34 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.0ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+Completed 200 OK in 68ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:36:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <div class="column">
+    11:       <table class="table">
+    12:         <tbody>
+    13:           <% @gardens.each do |garden| %>
+    14:             <tr>
+    15:               <%= render garden %>
+    16:             </tr>
+  
+app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb___1411851874014758404_70155727378860'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:37:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (9.3ms)
+Completed 200 OK in 342ms (Views: 184.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:39:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+Completed 200 OK in 245ms (Views: 191.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:39:42 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:39:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 141ms (Views: 134.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:48:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (1.9ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  Rendered users/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation_links.html.erb (3.0ms)
+  Rendered layouts/_navigation.html.erb (20.5ms)
+Completed 200 OK in 308ms (Views: 255.6ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:49:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (3.4ms)
+  Rendered layouts/_navigation.html.erb (15.0ms)
+Completed 200 OK in 135ms (Views: 127.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:50:24 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  Rendered users/show.html.erb within layouts/application (47.3ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    34:     <div class="column">
+    35:       <table class="table">
+    36:         <tbody>
+    37:           <% @community_gardens.each do |community_garden| %>
+    38:             <tr>
+    39:               <%= render community_garden %>
+    40:             </tr>
+  
+app/views/users/show.html.erb:37:in `_app_views_users_show_html_erb___1411851874014758404_70155694803880'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:50:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.2ms)
+
+
+  
+LoadError (Unable to autoload constant Community_Garden, expected /Users/changyeonpark/rubydecal/garden/app/models/community_garden.rb to define it):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:51:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 5.8ms)
+
+
+  
+LoadError (Unable to autoload constant Community_Garden, expected /Users/changyeonpark/rubydecal/garden/app/models/community_garden.rb to define it):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:52:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 2.7ms)
+
+
+  
+LoadError (Unable to autoload constant Community_Garden, expected /Users/changyeonpark/rubydecal/garden/app/models/community_garden.rb to define it):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:53:21 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.6ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8[0m
+  Rendered users/show.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: community_gardens.user: SELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8):
+    34:     <div class="column">
+    35:       <table class="table">
+    36:         <tbody>
+    37:           <% @community_gardens.each do |community_garden| %>
+    38:             <tr>
+    39:               <%= render community_garden %>
+    40:             </tr>
+  
+app/views/users/show.html.erb:37:in `_app_views_users_show_html_erb___1411851874014758404_70155695727400'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:54:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.5ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8[0m
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: community_gardens.user: SELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8):
+    34:     <div class="column">
+    35:       <table class="table">
+    36:         <tbody>
+    37:           <% @community_gardens.each do |community_garden| %>
+    38:             <tr>
+    39:               <%= render community_garden %>
+    40:             </tr>
+  
+app/views/users/show.html.erb:37:in `_app_views_users_show_html_erb___1411851874014758404_70155696619580'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:55:10 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.8ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8[0m
+  Rendered users/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: community_gardens.user: SELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8):
+    34:     <div class="column">
+    35:       <table class="table">
+    36:         <tbody>
+    37:           <% @community_gardens.each do |community_garden| %>
+    38:             <tr>
+    39:               <%= render community_garden %>
+    40:             </tr>
+  
+app/views/users/show.html.erb:37:in `_app_views_users_show_html_erb__2150004634163537287_70325374896120'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:55:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (1.3ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8[0m
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: community_gardens.user: SELECT "community_gardens".* FROM "community_gardens" WHERE "community_gardens"."user" = 8):
+    34:     <div class="column">
+    35:       <table class="table">
+    36:         <tbody>
+    37:           <% @community_gardens.each do |community_garden| %>
+    38:             <tr>
+    39:               <%= render community_garden %>
+    40:             </tr>
+  
+app/views/users/show.html.erb:37:in `_app_views_users_show_html_erb__2150004634163537287_70325377568300'
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:56:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (3.1ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.8ms)
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:56:24 -0700
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (12.5ms)
+Completed 200 OK in 4902ms (Views: 4851.5ms | ActiveRecord: 8.7ms)
+
+
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (44.0ms)
+  Rendered layouts/_navigation.html.erb (48.4ms)
+Completed 200 OK in 238ms (Views: 220.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-25 16:56:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (3.1ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+Completed 200 OK in 129ms (Views: 83.1ms | ActiveRecord: 6.5ms)
+
+

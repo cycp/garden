@@ -1,0 +1,2 @@
+class CommunityGardensController < ApplicationController
+end
