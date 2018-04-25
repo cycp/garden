@@ -4677,4 +4677,43 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.erb within layouts/application (1.4ms)
   Rendered layouts/_navigation_links.html.erb (0.6ms)
   Rendered layouts/_navigation.html.erb (2.8ms)
-Completed 200 OK in 114ms (Views: 101.5ms | ActiveRecord: 0.6ms)
+Completed 200 OK in 114ms (Views: 101.5ms | ActiveRecord: 0.6ms)Started GET "/" for 127.0.0.1 at 2018-04-25 16:07:13 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (24.1ms)
+  Rendered layouts/_navigation.html.erb (45.7ms)
+Completed 200 OK in 752ms (Views: 709.6ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-25 16:07:17 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kv2h/7lFclRtsnwx/6MxKmTjQMq4rlBBdPsYrvFx6f1QiFk/IhckRWRcj+3twbym8qUTdX+eEzkcH4YZbWTt3g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-25 16:07:17 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (4.9ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-25 16:07:19 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (99.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.0ms)
+
+
