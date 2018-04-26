@@ -11,4 +11,12 @@ class UsersController < ApplicationController
     @community_gardens = CommunityGarden.all # need to change this to include all users who are part of the community garden
   end
 
+  # def pick_plant 
+  # 	# user = current_user
+  # 	# user.current_plant = params[:plant][:ndex]
+  # 	# user.save
+  # 	redirect_to root_path
+  # 	# user.productivity +
+  # end
+
 end

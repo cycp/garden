@@ -2,12 +2,15 @@
   <%#= f.radio_button :id, @plant.id %>
   <%#= f.label { image_tag("plant/#{1}.png") + f.radio_button } %>
 
-  <div style = "text-align:center">
-  <%= f.collection_radio_buttons(:ndex, (1..6).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-	  <div class="plants-choice-container">
-	    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
-	  </div>
-	<% end %> </div><br>
+  	<div style = "text-align:center">
+	  	<%= f.collection_radio_buttons(:ndex, (1..6).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+		  <div class="plants-choice-container">
+		    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %> <br><br>
+		  </div>
+		<% end %> 
+	</div> <br>
+
+
 	<div style = "text-align:center">
 		<%= f.button :submit, class: "select-plant-button" %>
 	</div>

@@ -5999,4 +5999,1040 @@ Processing by PlantsController#new as HTML
   Rendered plants/new.html.erb within layouts/application (13.8ms)
   Rendered layouts/_navigation_links.html.erb (1.7ms)
   Rendered layouts/_navigation.html.erb (7.7ms)
-Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 2.2ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 2.2ms)  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:27 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:36 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EnJ1wqsMEVDqoqBJ1Mo/Ypojzv0cberiNTy3CbR/S//OwIv7c6l/rNE2UQfGgaYgZMfLrb5ZK02M49pDrw0rsw==", "plant"=>{"ndex"=>"5"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+No template found for UsersController#pick_plant, rendering head :no_content
+Completed 204 No Content in 369ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:17:40 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.2ms)
+  Rendered layouts/_navigation.html.erb (18.1ms)
+Completed 200 OK in 879ms (Views: 868.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:17:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (3.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 158ms (Views: 52.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:48 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (186.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 262ms (Views: 233.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:51 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SmGORiXzma36s5IojPfyaFRAE9OXfxpoH7tZIlv41feW03B//Vb3UcEnY2aevGsqqqQWgzVL28emZDRoQIq1uw==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+No template found for UsersController#pick_plant, rendering head :no_content
+Completed 204 No Content in 284ms (ActiveRecord: 0.6ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:54 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SmGORiXzma36s5IojPfyaFRAE9OXfxpoH7tZIlv41feW03B//Vb3UcEnY2aevGsqqqQWgzVL28emZDRoQIq1uw==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+No template found for UsersController#pick_plant, rendering head :no_content
+Completed 204 No Content in 277ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:17:58 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:23:48 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (42.5ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (38.3ms)
+  Rendered layouts/_navigation.html.erb (50.5ms)
+Completed 200 OK in 227ms (Views: 212.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/plants/pick" for 127.0.0.1 at 2018-04-26 15:24:00 -0700
+Processing by PlantsController#pick as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/pick.html.erb within layouts/application
+  Rendered plants/pick.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `ndex' for #<User:0x007f86a00900c8>):
+     5:   	<div style = "text-align:center">
+     6: 	  	<%= f.collection_radio_buttons(:ndex, (1..6).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+     7: 		  <div class="plants-choice-container">
+     8: 		    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
+     9: 		  </div>
+    10: 		<% end %> 
+    11: 	</div> <br>
+  
+app/views/plants/pick.html.erb:8:in `block (3 levels) in _app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
+app/views/plants/pick.html.erb:8:in `block (2 levels) in _app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
+app/views/plants/pick.html.erb:6:in `block in _app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
+app/views/plants/pick.html.erb:1:in `_app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
+Started GET "/plants/pick" for 127.0.0.1 at 2018-04-26 15:26:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/plants/pick"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:26:46 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (47.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (11.3ms)
+Completed 200 OK in 253ms (Views: 162.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:27:03 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+Completed 200 OK in 65ms (Views: 60.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:27:14 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:28:09 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (53.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+Completed 200 OK in 191ms (Views: 163.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:28:11 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:29:18 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:29:33 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U3WDC2yjnHsjk3eUi52c0Iw9tpgfZfgIw29DHenCd5+Px30ytAbyhxgHhtqZ1gWSctmzyL1ROad6sC5X8rAX0w==", "plant"=>{"ndex"=>""}, "button"=>""}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:29:33 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.6ms)
+  Rendered layouts/_navigation.html.erb (18.3ms)
+Completed 200 OK in 181ms (Views: 177.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:29:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (1.6ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (3.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (21.3ms)
+Completed 200 OK in 157ms (Views: 87.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:29:41 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (38.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+Completed 200 OK in 119ms (Views: 91.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:29:44 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TUR4PTsmigyvc9sZ2lftminoeSXWeSZqKPHkjn5wukKR9oYE44Pk8JTnKlfIHHTY1wx8dXRN58WRLonEZQLaDg==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:29:44 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.5ms)
+  Rendered layouts/_navigation.html.erb (6.1ms)
+Completed 200 OK in 66ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:30:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (5.7ms)
+Completed 200 OK in 97ms (Views: 79.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:32:00 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+Completed 200 OK in 63ms (Views: 55.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:32:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (2.9ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+Completed 200 OK in 106ms (Views: 50.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:32:37 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+Completed 200 OK in 119ms (Views: 95.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:32:40 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T3hR4Jyg4mLODODTA4Jjmr/d44T5f3Hy6IhCpUWomsGTyq/ZRAWMnvWYEZ0RyfrYQTnm1FtLsF1RVy/vXtr6jQ==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:32:40 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.2ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:32:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.4ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+Completed 200 OK in 101ms (Views: 91.2ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:34:13 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (2.6ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (40.4ms)
+Completed 200 OK in 1131ms (Views: 1009.0ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:34:19 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (138.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 209ms (Views: 183.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:34:23 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d+okQLIisdIvpoipsS9nzwFMuYcbjlLbiVBdlg2wuJmrWNp5aoffLhQyeeejZP6N/6i817m6k3QwjzDcFsLY1Q==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:34:23 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:34:35 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:34:51 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvFKuLiEX6DeFKlp19rB0wIRNhPDSac5Tlo21OelJ/T+Q7SBYCExXOWAWCfFkViR/PUzQ2F9Zpb3hVue/NdHuA==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:34:51 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.0ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:35:31 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (46.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+Completed 200 OK in 181ms (Views: 129.1ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:35:34 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HGarTZJTnk4+hC0odKjK+WcRZGcOHHy54K9246N5+dvA1FV0SvbwsgUQ3GZm41O7mfVhN6wovRZZcBupuAuZlw==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:35:34 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:35:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (2.9ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+Completed 200 OK in 129ms (Views: 59.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:36:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (22.3ms)
+Completed 200 OK in 211ms (Views: 194.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:40:17 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (86.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (6.7ms)
+Completed 200 OK in 333ms (Views: 230.8ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:40:21 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zmIWPD6S7vuUB27sX56zEnNZxZccAemlgP0mjKf4JCIS0OgF5jeAB6+Tn6JN1SpQjb3Ax741KAo5IkvGvIpEbg==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:40:21 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.1ms)
+  Rendered layouts/_navigation.html.erb (7.0ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:40:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (2.7ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (8.3ms)
+Completed 200 OK in 195ms (Views: 110.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:41:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:41:11 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (67.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+Completed 200 OK in 128ms (Views: 123.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:41:14 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2t2SsgirvENK1y9ZKnibgsM5B9lChEj58wrgB79SLLkGb2yL0A7Sv3FD3hc4MwLAPd0CieCwiVZK1Y1NpCBM9Q==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:41:14 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.7ms)
+  Rendered layouts/_navigation.html.erb (9.7ms)
+Completed 200 OK in 90ms (Views: 83.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:41:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+Completed 200 OK in 120ms (Views: 86.5ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:44:37 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.9ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+Completed 200 OK in 151ms (Views: 145.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:44:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.4ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.3ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+Completed 200 OK in 134ms (Views: 92.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:44:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.4ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+Completed 200 OK in 134ms (Views: 127.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:51:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (2.6ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+Completed 200 OK in 319ms (Views: 241.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:51:39 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (74.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+Completed 200 OK in 199ms (Views: 135.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:51:48 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6b8DV3UOsZ1iAZYSFgykXAUuQXTjwWW3YkEp3O559OU1Df1uravfYVmVZ1wERz0e+8pEJEH1pBjbnkSW9QuUqQ==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "current_plant" = ? WHERE "users"."id" = ?[0m  [["current_plant", 1], ["id", 8]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 15:51:48 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (3.6ms)
+  Rendered layouts/_navigation.html.erb (7.4ms)
+Completed 200 OK in 63ms (Views: 57.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:51:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.3ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 96ms (Views: 84.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 15:52:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+Completed 200 OK in 106ms (Views: 57.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:52:11 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+Completed 200 OK in 111ms (Views: 90.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 15:52:13 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/plants/new"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:03:09 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (88.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (9.7ms)
+Completed 200 OK in 319ms (Views: 240.9ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 16:03:12 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1XoqwXtv5LipYFM4OJcRpDL0dYed5Ikx8NoM+1z4AOX5xaS3UjRbtkxcALyqcUEbi/UhrxDU4t+HAV59gGATw==", "plant"=>{"ndex"=>"1"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:16:in `pick_plant'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:04:40 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (79.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+Completed 200 OK in 345ms (Views: 263.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 16:04:43 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDLVH7kKe1ZlJFhmKoBZwIFznB3XZhPBDE0cWhSSogIUgCsmYa8Vql6wqSg4y8CCf5eZTXVS0m61knEQD+DCTg==", "plant"=>{"ndex"=>"3"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fe1d0c72ec8>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:17:in `pick_plant'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:04:52 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (42.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+Completed 200 OK in 193ms (Views: 140.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 16:04:55 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hxr8Do1mMMa5wRKKxWRzgGSnf57SU0Vedsx7W5COYmrDqAI3VcNeOoJV48TXL+rCmkN6znBnhPHPExYRi/wCJg==", "plant"=>{"ndex"=>"5"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 16:04:55 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 16:04:55 -0700
+Processing by UsersController#pick_plant as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hxr8Do1mMMa5wRKKxWRzgGSnf57SU0Vedsx7W5COYmrDqAI3VcNeOoJV48TXL+rCmkN6znBnhPHPExYRi/wCJg==", "plant"=>{"ndex"=>"5"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (12.5ms)
+  Rendered layouts/_navigation.html.erb (16.1ms)
+Completed 200 OK in 113ms (Views: 105.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 16:04:55 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (5.1ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 16:04:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (0.2ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+Completed 200 OK in 148ms (Views: 96.3ms | ActiveRecord: 4.0ms)
+
+
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddGardenRefToPlants (20180426231503)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "plants" ADD "garden_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX "index_plants_on_garden_id" ON "plants" ("garden_id")[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180426231503"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_garden_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_garden_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
