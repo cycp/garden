@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421201307) do
+ActiveRecord::Schema.define(version: 20180426080653) do
 
   create_table "community_gardens", force: :cascade do |t|
     t.string "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20180421201307) do
     t.integer "time_to_grow"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "ndex"
   end
 
   create_table "users", force: :cascade do |t|
