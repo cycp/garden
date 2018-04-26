@@ -1,4 +1,4 @@
- [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
   [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -5218,8 +5218,8 @@ ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x
 Did you mean?  simple_format):
     1: <%= simple_form_for @plant do |f| %>
     2:   <%= f.collection_radio_buttons(:ndex, (1).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div>
-    4: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    3:    <div>
+    4:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
   
 app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb__4110217854931832943_70122052059260'
 Started GET "/users/8" for 127.0.0.1 at 2018-04-26 00:32:41 -0700
@@ -5249,8 +5249,8 @@ ActionView::Template::Error (undefined method `plants_path' for #<#<Class:0x007f
 Did you mean?  plants_new_path):
     1: <%= form_for @plant do |f| %>
     2:   <%= f.collection_radio_buttons(:ndex, (1).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div>
-    4: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    3:    <div>
+    4:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
   
 app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb__4110217854931832943_70122065435420'
 Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 00:37:29 -0700
@@ -5359,11 +5359,11 @@ Completed 500 Internal Server Error in 321ms (ActiveRecord: 1.5ms)
   
 ActionView::Template::Error (The asset "pokemon/1.png" is not present in the asset pipeline.):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (1..649).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("pokemon/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
-    6: 	<% end %> <br>
+    2:  <%= f.collection_radio_buttons(:ndex, (1..649).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("pokemon/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
+    6:  <% end %> <br>
     7:   <%= f.button :submit, class: "create-pokemon-btn" %>
   
 app/views/plants/new.html.erb:4:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122022575220'
@@ -5382,10 +5382,10 @@ Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
 ActionView::Template::Error (undefined method `map' for 1:Integer
 Did you mean?  tap):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (1).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
+    2:  <%= f.collection_radio_buttons(:ndex, (1).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
   
 app/views/plants/new.html.erb:2:in `block in _app_views_plants_new_html_erb__4110217854931832943_70122032264220'
 app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb__4110217854931832943_70122032264220'
@@ -5400,11 +5400,11 @@ Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
   
 ActionView::Template::Error (The asset "plants/1.png" is not present in the asset pipeline.):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (1..12).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
-    6: 	<% end %> <br>
+    2:  <%= f.collection_radio_buttons(:ndex, (1..12).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
+    6:  <% end %> <br>
     7:   <%= f.button :submit, class: "create-pokemon-btn" %>
   
 app/views/plants/new.html.erb:4:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122021035380'
@@ -5422,11 +5422,11 @@ Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.6ms)
   
 ActionView::Template::Error (undefined method `ndex' for #<Plant:0x007f8d23979fc0>):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (0..12).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
-    6: 	<% end %> <br>
+    2:  <%= f.collection_radio_buttons(:ndex, (0..12).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
+    6:  <% end %> <br>
     7:   <%= f.button :submit, class: "create-pokemon-btn" %>
   
 app/views/plants/new.html.erb:4:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122082125160'
@@ -5444,11 +5444,11 @@ Completed 500 Internal Server Error in 101ms (ActiveRecord: 3.9ms)
   
 ActionView::Template::Error (undefined method `ndex' for #<Plant:0x007f8d1ddad840>):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
-    6: 	<% end %> <br>
+    2:  <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
+    6:  <% end %> <br>
     7:   <%= f.button :submit, class: "create-pokemon-btn" %>
   
 app/views/plants/new.html.erb:4:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122033982280'
@@ -5466,10 +5466,10 @@ Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
   
 ActionView::Template::Error (wrong number of arguments (given 2, expected 4..6)):
     1: <%= form_for @plant, url: plants_new_path do |f| %>
-    2: 	<%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}) do |b| %>
-    3: 	  <div class="pokemon-choice-container">
-    4: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    5: 	  </div>
+    2:  <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}) do |b| %>
+    3:    <div class="pokemon-choice-container">
+    4:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    5:    </div>
   
 app/views/plants/new.html.erb:2:in `block in _app_views_plants_new_html_erb__4110217854931832943_70122055963780'
 app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb__4110217854931832943_70122055963780'
@@ -5618,10 +5618,10 @@ Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.5ms)
 ActionView::Template::Error (The asset "plant/1.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (1..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122073135320'
@@ -5640,10 +5640,10 @@ Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (The asset "images/plant/1.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (1..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("images/plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("images/plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122030697440'
@@ -5662,10 +5662,10 @@ Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (The asset "plant/1.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (1..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122055832540'
@@ -5684,10 +5684,10 @@ Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (The asset "plant/0.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122083249260'
@@ -5706,10 +5706,10 @@ Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
 ActionView::Template::Error (The asset "plant/0.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122022538280'
@@ -5728,10 +5728,10 @@ Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (The asset "plant/0.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plant/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122081748320'
@@ -5750,10 +5750,10 @@ Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (undefined method `ndex' for #<Plant:0x007f8d1c460400>):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb__4110217854931832943_70122033835600'
@@ -5860,10 +5860,10 @@ Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.1ms)
 ActionView::Template::Error (The asset "plants/0.png" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189125418920'
@@ -5882,10 +5882,10 @@ Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
 ActionView::Template::Error (The asset "plants/0.jpg" is not present in the asset pipeline.):
     4: 
     5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-    6: 	  <div>
-    7: 	    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
-    8: 	  </div>
-    9: 	<% end %> <br>
+    6:    <div>
+    7:      <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
+    8:    </div>
+    9:  <% end %> <br>
    10: 
   
 app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189127156140'
@@ -6000,129 +6000,3 @@ Processing by PlantsController#new as HTML
   Rendered layouts/_navigation_links.html.erb (1.7ms)
   Rendered layouts/_navigation.html.erb (7.7ms)
 Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 2.2ms)
-
-
-  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to AddColsToUser (20180426220306)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_plant" integer[0m
-  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "time" integer[0m
-  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180426220306"]]
-  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_community_gardens_on_user_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_community_gardens_on_user_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_gardens_on_user_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_gardens_on_user_id' AND type='index'
-[0m
-  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_users_on_reset_password_token' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_users_on_reset_password_token' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_users_on_email' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_users_on_email' AND type='index'
-[0m
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:04:53 -0700
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (47.4ms)
-  Rendered layouts/_navigation_links.html.erb (1.6ms)
-  Rendered layouts/_navigation.html.erb (14.1ms)
-Completed 200 OK in 254ms (Views: 176.5ms | ActiveRecord: 3.6ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:05:52 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (43.7ms)
-  Rendered layouts/_navigation_links.html.erb (1.7ms)
-  Rendered layouts/_navigation.html.erb (6.9ms)
-Completed 200 OK in 2112ms (Views: 2106.3ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:28 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (15.9ms)
-  Rendered layouts/_navigation_links.html.erb (1.6ms)
-  Rendered layouts/_navigation.html.erb (10.2ms)
-Completed 200 OK in 1676ms (Views: 1670.3ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:45 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (15.6ms)
-  Rendered layouts/_navigation_links.html.erb (1.8ms)
-  Rendered layouts/_navigation.html.erb (10.3ms)
-Completed 200 OK in 1741ms (Views: 1736.1ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:52 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (18.7ms)
-  Rendered layouts/_navigation_links.html.erb (1.4ms)
-  Rendered layouts/_navigation.html.erb (9.0ms)
-Completed 200 OK in 1572ms (Views: 1567.3ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:02 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (15.0ms)
-  Rendered layouts/_navigation_links.html.erb (1.4ms)
-  Rendered layouts/_navigation.html.erb (8.9ms)
-Completed 200 OK in 1776ms (Views: 1770.1ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:08 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (19.3ms)
-  Rendered layouts/_navigation_links.html.erb (1.4ms)
-  Rendered layouts/_navigation.html.erb (8.8ms)
-Completed 200 OK in 1779ms (Views: 1772.6ms | ActiveRecord: 0.4ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:25 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (16.0ms)
-  Rendered layouts/_navigation_links.html.erb (1.4ms)
-  Rendered layouts/_navigation.html.erb (4.6ms)
-Completed 200 OK in 1591ms (Views: 1586.1ms | ActiveRecord: 0.3ms)
-
-
