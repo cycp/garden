@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20180426231503) do
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.integer "time_to_grow"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "ndex"
@@ -52,6 +51,7 @@ ActiveRecord::Schema.define(version: 20180426231503) do
     t.string "last_sign_in_ip"
     t.integer "coins"
     t.string "name"
+    t.integer "productivity"
     t.integer "current_plant"
     t.integer "time"
     t.index ["email"], name: "index_users_on_email", unique: true

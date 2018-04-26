@@ -1,8 +1,11 @@
 class PlantsController < ApplicationController
-    before_action :authenticate_user!
 
-    def new 
-    	@plant = Plant.new
+before_action :authenticate_user!
+  def new
+    permitted = params.require(:id, :garden).permit(:plantID,:garden)
+    @plant = Plant.new(id:permitted[:id],garden:permitted[:garden])
+    if @plant.valid?
+      @plant.save
     end
 
     def index
@@ -19,6 +22,7 @@ class PlantsController < ApplicationController
     def plant_params 
 		params.require(:plant).permit(:ndex)
 	end
+
 
 
 end
