@@ -1,0 +1,13 @@
+<%= form_for @plant, url: plants_new_path do |f| %>
+  <%#= f.radio_button :id, @plant.id %>
+  <%#= f.label { image_tag("plant/#{1}.png") + f.radio_button } %>
+
+  <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+	  <div>
+	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+	  </div>
+	<% end %> <br>
+
+
+
+<% end %>
