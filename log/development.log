@@ -5813,3 +5813,192 @@ Processing by PlantsController#new as HTML
 Completed 200 OK in 1014ms (Views: 921.6ms | ActiveRecord: 4.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-26 14:48:09 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (68.5ms)
+  Rendered layouts/_navigation.html.erb (90.9ms)
+Completed 200 OK in 1081ms (Views: 1041.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2018-04-26 14:48:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (2.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 8[0m
+  [1m[36mCommunityGarden Load (3.0ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
+  Rendered users/show.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+Completed 200 OK in 144ms (Views: 54.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:48:21 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (212.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+Completed 200 OK in 325ms (Views: 281.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:51:00 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (The asset "plants/0.png" is not present in the asset pipeline.):
+    4: 
+    5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    6: 	  <div>
+    7: 	    <%= b.label { image_tag("plants/#{b.text}.png") + b.radio_button } %>
+    8: 	  </div>
+    9: 	<% end %> <br>
+   10: 
+  
+app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189125418920'
+app/views/plants/new.html.erb:7:in `block (2 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189125418920'
+app/views/plants/new.html.erb:5:in `block in _app_views_plants_new_html_erb___3776738278199562816_70189125418920'
+app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb___3776738278199562816_70189125418920'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:51:15 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (The asset "plants/0.jpg" is not present in the asset pipeline.):
+    4: 
+    5:   <%= f.collection_radio_buttons(:ndex, (0..5).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+    6: 	  <div>
+    7: 	    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
+    8: 	  </div>
+    9: 	<% end %> <br>
+   10: 
+  
+app/views/plants/new.html.erb:7:in `block (3 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189127156140'
+app/views/plants/new.html.erb:7:in `block (2 levels) in _app_views_plants_new_html_erb___3776738278199562816_70189127156140'
+app/views/plants/new.html.erb:5:in `block in _app_views_plants_new_html_erb___3776738278199562816_70189127156140'
+app/views/plants/new.html.erb:1:in `_app_views_plants_new_html_erb___3776738278199562816_70189127156140'
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:51:26 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (523.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (8.2ms)
+Completed 200 OK in 641ms (Views: 634.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:52:59 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (185.2ms)
+  Rendered layouts/_navigation_links.html.erb (4.0ms)
+  Rendered layouts/_navigation.html.erb (100.8ms)
+Completed 200 OK in 5701ms (Views: 5642.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:53:38 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (39.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+Completed 200 OK in 2201ms (Views: 2172.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:54:11 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (152.5ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+Completed 200 OK in 222ms (Views: 214.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:54:22 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (49.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (6.1ms)
+Completed 200 OK in 115ms (Views: 107.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:54:36 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (8.5ms)
+Completed 200 OK in 1753ms (Views: 1749.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:54:44 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (9.8ms)
+Completed 200 OK in 1668ms (Views: 1661.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:54:56 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (10.4ms)
+Completed 200 OK in 1577ms (Views: 1571.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:55:19 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (43.3ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (7.4ms)
+Completed 200 OK in 2217ms (Views: 2207.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:56:02 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+Completed 200 OK in 74ms (Views: 68.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 14:56:22 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (7.7ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 2.2ms)
+
+
