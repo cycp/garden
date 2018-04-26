@@ -12,3 +12,19 @@
 	 }
   	border-radius: 5px;
 }
+
+.select-plant-button {
+	margin: 10px auto;
+  	padding: 10px 20px 10px 20px;
+  	background-color: #4d8ef7;
+  	color: white;
+  	border: 4px solid white;
+  	font-size: 20px;
+  	transition: 150ms;
+  	&:hover {
+	    // background-color: #659df7;
+	    transform: scale(1.05, 1.05);
+	    transform-origin: center;
+	    cursor: pointer;
+	  }
+}

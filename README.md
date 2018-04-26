@@ -37,11 +37,11 @@ Features:
 
 Division of Labor:
 
-•	Akash:
+•	Akash: Plants and Garden, model and controller
 
 •	Clara:
 
-•	Michelle:
+•	Michelle: Community Garden, model and controller
 
 •	Shenelle:
 

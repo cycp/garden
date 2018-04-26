@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426224748) do
+ActiveRecord::Schema.define(version: 20180426220306) do
 
   create_table "community_gardens", force: :cascade do |t|
     t.string "name"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20180426224748) do
     t.integer "coins"
     t.string "name"
     t.integer "productivity"
+    t.integer "current_plant"
+    t.integer "time"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
