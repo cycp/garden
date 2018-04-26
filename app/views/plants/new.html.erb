@@ -8,7 +8,8 @@
 	    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
 	  </div>
 	<% end %> </div><br>
-
-
+	<div style = "text-align:center">
+		<%= f.button :submit, class: "select-plant-button" %>
+	</div>
 
 <% end %>

@@ -6045,3 +6045,84 @@ Migrating to AddColsToUser (20180426220306)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:04:53 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (47.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (14.1ms)
+Completed 200 OK in 254ms (Views: 176.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:05:52 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (43.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (6.9ms)
+Completed 200 OK in 2112ms (Views: 2106.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:28 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (10.2ms)
+Completed 200 OK in 1676ms (Views: 1670.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:45 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+Completed 200 OK in 1741ms (Views: 1736.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:06:52 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (9.0ms)
+Completed 200 OK in 1572ms (Views: 1567.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:02 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (8.9ms)
+Completed 200 OK in 1776ms (Views: 1770.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:08 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (8.8ms)
+Completed 200 OK in 1779ms (Views: 1772.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 15:07:25 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+Completed 200 OK in 1591ms (Views: 1586.1ms | ActiveRecord: 0.3ms)
+
+
