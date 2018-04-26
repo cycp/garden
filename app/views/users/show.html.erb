@@ -1,0 +1,52 @@
+<h3>User</h3>
+
+<p>Name: <%= @user.name if @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+
+<!-- <p>Personal Garden: </p> -->
+<div class="container">
+  <div class="row">
+    <h3>Personal Gardens</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @gardens.each do |garden| %>
+            <tr>
+              <%= render garden %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%# @trainer.gardens.each do |garden| %> 
+<!-- <li class="name"> -->
+	<%#= link_to 'Personal Garden', unknown_path %>
+<!-- </li>  -->
+<%# end %>
+
+<!-- <p>Community Gardens: </p> -->
+<div class="container">
+  <div class="row">
+    <h3>Community Gardens</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @community_gardens.each do |community_garden| %>
+            <tr>
+              <%= render community_garden %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%# @trainer.gardens.each do |garden| %> 
+<!-- <li class="name"> -->
+	<%#= link_to 'Community Garden', unknown_path %>
+<!-- </li>  -->
+<%# end %>
+
