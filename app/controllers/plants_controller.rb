@@ -42,5 +42,4 @@ before_action :authenticate_user!
 		params.require(:plant).permit(:ndex)
   end
 
->>>>>>> 12e606ed23f3010b2c9e3af0370dece6d78a13e0
 end
