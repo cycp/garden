@@ -8,5 +8,5 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
     @plants = Plant.where(garden:@garden)
     return @plants.new
-    
+end
 end

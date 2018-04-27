@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426231503) do
+ActiveRecord::Schema.define(version: 20180427003735) do
 
   create_table "community_gardens", force: :cascade do |t|
     t.string "name"
@@ -54,7 +54,9 @@ ActiveRecord::Schema.define(version: 20180426231503) do
     t.integer "current_plant"
     t.integer "time"
     t.integer "productivity"
+    t.integer "garden_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["garden_id"], name: "index_users_on_garden_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

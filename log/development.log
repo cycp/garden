@@ -7626,4 +7626,8 @@ Migrating to AddGardenRefToUsers (20180427003735)
             SELECT sql
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
+<<<<<<< HEAD
 [0m
+=======
+[0m
+>>>>>>> 82eba388785c79dfe9c4c4034f4eeee7353c6b38
