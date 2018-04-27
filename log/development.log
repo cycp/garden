@@ -7631,6 +7631,7 @@ Migrating to AddGardenRefToUsers (20180427003735)
 =======
 [0m
 >>>>>>> 82eba388785c79dfe9c4c4034f4eeee7353c6b38
+<<<<<<< HEAD
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -7734,6 +7735,13 @@ Migrating to AddGardenRefToPlants (20180426231503)
 Migrating to AddGardenRefToUsers (20180427003735)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "garden_id" integer[0m
+=======
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddGardenRefToUsers (20180427003735)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "garden_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+>>>>>>> a0ae13284714b68c2f0d5b1fc85e52606527f82e
   [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
             FROM sqlite_master
             WHERE name='index_users_on_reset_password_token' AND type='index'
@@ -7742,7 +7750,11 @@ Migrating to AddGardenRefToUsers (20180427003735)
             FROM sqlite_temp_master
             WHERE name='index_users_on_reset_password_token' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+=======
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+>>>>>>> a0ae13284714b68c2f0d5b1fc85e52606527f82e
             FROM sqlite_master
             WHERE name='index_users_on_email' AND type='index'
             UNION ALL
@@ -7750,6 +7762,7 @@ Migrating to AddGardenRefToUsers (20180427003735)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_garden_id" ON "users" ("garden_id")[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180427003735"]]
   [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
@@ -7758,6 +7771,15 @@ Migrating to AddGardenRefToUsers (20180427003735)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-27 00:43:29.310772"], ["updated_at", "2018-04-27 00:43:29.310772"]]
   [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_garden_id" ON "users" ("garden_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180427003735"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> a0ae13284714b68c2f0d5b1fc85e52606527f82e
   [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
             FROM sqlite_master
             WHERE name='index_community_gardens_on_user_id' AND type='index'
@@ -7806,6 +7828,7 @@ Migrating to AddGardenRefToUsers (20180427003735)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-04-26 17:43:45 -0700
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by HomeController#index as HTML
@@ -7950,5 +7973,96 @@ Processing by UsersController#show as HTML
   Rendered layouts/_navigation_links.html.erb (1.2ms)
   Rendered layouts/_navigation.html.erb (7.3ms)
 Completed 200 OK in 136ms (Views: 128.1ms | ActiveRecord: 1.0ms)
+=======
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 17:49:38 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (266.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+Completed 200 OK in 362ms (Views: 320.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 17:49:49 -0700
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZgxAXx6BJoUFdOX+sqCA8z38lDPAwsOPwZLi6160qZ/Zf4n7bPYWgYGZsLFMeCrGooLN3LtHfDoBbL3Tnv3Dg==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `curr_plant' for #<PlantsController:0x007fef9b4cba98>):
+  
+app/controllers/plants_controller.rb:24:in `create'
+Started POST "/plants/new" for 127.0.0.1 at 2018-04-26 17:50:36 -0700
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZgxAXx6BJoUFdOX+sqCA8z38lDPAwsOPwZLi6160qZ/Zf4n7bPYWgYGZsLFMeCrGooLN3LtHfDoBbL3Tnv3Dg==", "plant"=>{"ndex"=>"2"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT  "gardens".* FROM "gardens" WHERE "gardens"."user_id" = ? LIMIT ?[0m  [["user_id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 2.5ms)
+
+
+  
+NameError (undefined local variable or method `curr_plant' for #<PlantsController:0x007fef9f1036f0>):
+  
+app/controllers/plants_controller.rb:25:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-26 17:50:38 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 17:50:40 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (1.9ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-26 17:50:41 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (2.7ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2018-04-26 17:50:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 9[0m
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+Completed 200 OK in 48ms (Views: 41.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 17:50:48 -0700
+Processing by PlantsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+>>>>>>> a0ae13284714b68c2f0d5b1fc85e52606527f82e
 
 
