@@ -6305,13 +6305,13 @@ Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.5ms)
 
   
 ActionView::Template::Error (undefined method `ndex' for #<User:0x007f86a00900c8>):
-     5:   	<div style = "text-align:center">
-     6: 	  	<%= f.collection_radio_buttons(:ndex, (1..6).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
-     7: 		  <div class="plants-choice-container">
-     8: 		    <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
-     9: 		  </div>
-    10: 		<% end %> 
-    11: 	</div> <br>
+     5:     <div style = "text-align:center">
+     6:       <%= f.collection_radio_buttons(:ndex, (1..6).map {|ndex| [ndex, ndex]}, :first, :last) do |b| %>
+     7:       <div class="plants-choice-container">
+     8:         <%= b.label { image_tag("plants/#{b.text}.jpg") + b.radio_button } %>
+     9:       </div>
+    10:     <% end %> 
+    11:   </div> <br>
   
 app/views/plants/pick.html.erb:8:in `block (3 levels) in _app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
 app/views/plants/pick.html.erb:8:in `block (2 levels) in _app_views_plants_pick_html_erb__2515721920266781211_70108080476820'
@@ -7550,205 +7550,80 @@ Migrating to RemoveTimeToGrowFromPlants (20180426224748)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:43:37 -0700
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-SyntaxError (/Users/Michelle/rails/final-proj/garden/app/controllers/plants_controller.rb:32: syntax error, unexpected keyword_end, expecting end-of-input):
-  
-app/controllers/plants_controller.rb:32: syntax error, unexpected keyword_end, expecting end-of-input
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:44:25 -0700
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-Completed 401 Unauthorized in 20ms (ActiveRecord: 0.8ms)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-26 16:44:25 -0700
-Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (1.1ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (13.6ms)
-  Rendered layouts/_navigation_links.html.erb (0.7ms)
-  Rendered layouts/_navigation.html.erb (4.6ms)
-Completed 200 OK in 369ms (Views: 337.7ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-26 16:44:32 -0700
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWpli7xAVntFp0MR/kE/Ei5SzzxPFTdi+aJ5BKnjjqZnl6qtLYmKu1e09kTBul26+C82W/L7IZwuoYB4SuKrDg==", "user"=>{"email"=>"mzhang32@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mzhang32@berkeley.edu"], ["LIMIT", 1]]
-Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
-
-
-Processing by Devise::SessionsController#new as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWpli7xAVntFp0MR/kE/Ei5SzzxPFTdi+aJ5BKnjjqZnl6qtLYmKu1e09kTBul26+C82W/L7IZwuoYB4SuKrDg==", "user"=>{"email"=>"mzhang32@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (0.7ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
-  Rendered layouts/_navigation_links.html.erb (0.9ms)
-  Rendered layouts/_navigation.html.erb (3.9ms)
-Completed 200 OK in 189ms (Views: 44.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-26 16:44:34 -0700
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (0.8ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
-  Rendered layouts/_navigation_links.html.erb (0.5ms)
-  Rendered layouts/_navigation.html.erb (2.6ms)
-Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
-
-
-Started POST "/users" for 127.0.0.1 at 2018-04-26 16:44:58 -0700
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NntNbWXeBLEF4o+CfjxBKEHTqmYelgU9VebmT8lU+b+hYtgFycroAcgG8SAAwtPST413VIIYcsT5EGmnY4E1og==", "user"=>{"name"=>"michelle ", "email"=>"mzhang32@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mPlant Load (8.7ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddGardenRefToUsers (20180427003735)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mzhang32@berkeley.edu"], ["LIMIT", 1]]
-  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (0.9ms)
-  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
-  Rendered layouts/_navigation_links.html.erb (0.6ms)
-  Rendered layouts/_navigation.html.erb (3.0ms)
-Completed 200 OK in 224ms (Views: 61.3ms | ActiveRecord: 0.3ms)
-
-
-Started POST "/users" for 127.0.0.1 at 2018-04-26 16:45:11 -0700
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nv5S+HoAGtz0Huxs9Eh1GO75xUHzJhJUH0tjCL/sielEA53e68nGHOYNWTnLsxewOIQ8Jk7IBKrISJp0XO2sQQ==", "user"=>{"name"=>"michelle ", "email"=>"mzhang32@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "users" ADD "garden_id" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_users_on_garden_id" ON "users" ("garden_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180427003735"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mzhang32@berkeley.edu"], ["LIMIT", 1]]
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name") VALUES (?, ?, ?)[0m  [["email", "mzhang32@berkeley.edu"], ["encrypted_password", "$2a$11$4k1754BA8AL1yylsPvf.hudGKLPj1H4v3UFjyRsA2H.o.iY0bwpAq"], ["name", "michelle "]]
-  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-26 23:45:11.254975"], ["last_sign_in_at", "2018-04-26 23:45:11.254975"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 9]]
-  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
-Redirected to http://localhost:3000/plants/new
-Completed 302 Found in 167ms (ActiveRecord: 4.5ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:45:11 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (87.7ms)
-  Rendered layouts/_navigation_links.html.erb (1.6ms)
-  Rendered layouts/_navigation.html.erb (5.8ms)
-Completed 200 OK in 151ms (Views: 134.0ms | ActiveRecord: 0.7ms)
-
-
-Started GET "/users/9" for 127.0.0.1 at 2018-04-26 16:45:14 -0700
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 9[0m
-  [1m[36mCommunityGarden Load (0.1ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
-  Rendered users/show.html.erb within layouts/application (4.0ms)
-  Rendered layouts/_navigation_links.html.erb (0.6ms)
-  Rendered layouts/_navigation.html.erb (3.4ms)
-Completed 200 OK in 59ms (Views: 40.5ms | ActiveRecord: 1.2ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 16:45:20 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (9.5ms)
-  Rendered layouts/_navigation_links.html.erb (0.5ms)
-  Rendered layouts/_navigation.html.erb (2.6ms)
-Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 0.2ms)
-
-
-Started GET "/" for 127.0.0.1 at 2018-04-26 17:06:12 -0700
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (1.4ms)
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendered layouts/_navigation_links.html.erb (17.9ms)
-  Rendered layouts/_navigation.html.erb (21.6ms)
-Completed 200 OK in 325ms (Views: 307.0ms | ActiveRecord: 1.1ms)
-
-
-Started GET "/users/9" for 127.0.0.1 at 2018-04-26 17:06:16 -0700
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 9[0m
-  [1m[36mCommunityGarden Load (0.1ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
-  Rendered users/show.html.erb within layouts/application (3.4ms)
-  Rendered layouts/_navigation_links.html.erb (0.6ms)
-  Rendered layouts/_navigation.html.erb (3.2ms)
-Completed 200 OK in 58ms (Views: 37.7ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/users/9" for 127.0.0.1 at 2018-04-26 17:06:39 -0700
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"9"}
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."user_id" = 9[0m
-  [1m[36mCommunityGarden Load (0.1ms)[0m  [1m[34mSELECT "community_gardens".* FROM "community_gardens"[0m
-  Rendered users/show.html.erb within layouts/application (1.7ms)
-  Rendered layouts/_navigation_links.html.erb (0.7ms)
-  Rendered layouts/_navigation.html.erb (3.2ms)
-Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.5ms)
-
-
-Started GET "/plant/new" for 127.0.0.1 at 2018-04-26 17:06:52 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/plant/new"):
-  
-actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
-web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
-actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
-rack (2.0.4) lib/rack/method_override.rb:22:in `call'
-rack (2.0.4) lib/rack/runtime.rb:22:in `call'
-activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
-actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
-rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
-railties (5.1.6) lib/rails/engine.rb:522:in `call'
-puma (3.11.4) lib/puma/configuration.rb:225:in `call'
-puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
-puma (3.11.4) lib/puma/server.rb:446:in `process_client'
-puma (3.11.4) lib/puma/server.rb:306:in `block in run'
-puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-04-26 17:07:00 -0700
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/index.html.erb within layouts/application (0.4ms)
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendered layouts/_navigation_links.html.erb (2.1ms)
-  Rendered layouts/_navigation.html.erb (4.3ms)
-Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/plants/new" for 127.0.0.1 at 2018-04-26 17:07:05 -0700
-Processing by PlantsController#new as HTML
-  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
-  Rendering plants/new.html.erb within layouts/application
-  Rendered plants/new.html.erb within layouts/application (74.3ms)
-  Rendered layouts/_navigation_links.html.erb (0.6ms)
-  Rendered layouts/_navigation.html.erb (3.0ms)
-Completed 200 OK in 129ms (Views: 118.7ms | ActiveRecord: 0.6ms)
-
-
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_community_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_gardens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_plants_on_garden_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_plants_on_garden_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_garden_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_garden_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m

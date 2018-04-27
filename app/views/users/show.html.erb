@@ -12,7 +12,7 @@
         <tbody>
           <% @gardens.each do |garden| %>
             <tr>
-              <%= render garden %>
+              <%= render 'users/garden' %>
             </tr>
           <% end %>
         </tbody>
@@ -36,7 +36,7 @@
         <tbody>
           <% @community_gardens.each do |community_garden| %>
             <tr>
-              <%= render community_garden %>
+              <%#= render community_garden %>
             </tr>
           <% end %>
         </tbody>
