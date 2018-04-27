@@ -10,14 +10,14 @@ before_action :authenticate_user!
     @plant = Plant.new
   end
 
-    def index
-      @plants = Plant.all
-    end
+  def index
+    @plants = Plant.all
+  end
 
-    def show
-      #Change this!
-      @plant = Plant.all
-    end
+  def show
+    #Change this!
+    @plant = Plant.all
+  end
 
     def create
     	plant = Plant.create(plant_params)
@@ -27,9 +27,8 @@ before_action :authenticate_user!
 
     end
 
-    def plant_params 
+  def plant_params 
 		params.require(:plant).permit(:ndex)
-	end
-
+  end
 
 end
