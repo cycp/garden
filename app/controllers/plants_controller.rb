@@ -19,28 +19,16 @@ before_action :authenticate_user!
     @plant = Plant.all
   end
 
-<<<<<<< HEAD
   def create
-  	curr_plant = Plant.new(plant_params)
-    curr_plant.garden_id = current_user.garden_id
+  	plant = Plant.create(plant_params)
+  	plant.garden_id = current_user.garden
     current_user.productivity += curr_plant.price
+    current_user.time = plant_params[:amount]
+  	plant.save!
+  	redirect_to user_path(current_user.id)
   end
 
   def plant_params 
 		params.require(:plant).permit(:ndex)
-	end
-=======
-    def create
-    	plant = Plant.create(plant_params)
-    	plant.garden = Garden.New
-    	plant.save!
-    	redirect_to user_path(current_user.id)
-
-    end
-
-  def plant_params 
-		params.require(:plant).permit(:ndex)
   end
-
->>>>>>> 12e606ed23f3010b2c9e3af0370dece6d78a13e0
 end
