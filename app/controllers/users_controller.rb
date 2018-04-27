@@ -15,7 +15,6 @@ class UsersController < ApplicationController
     user.coins += user.productivity
   end
 
-
   # def pick_plant 
   # 	# user = current_user
   # 	# user.current_plant = params[:plant][:ndex]

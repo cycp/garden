@@ -20,12 +20,12 @@ before_action :authenticate_user!
   end
 
   def create
-  	plant = Plant.create(plant_params)
-  	# plant.
+  	curr_plant = Plant.new(plant_params)
+    curr_plant.garden_id = current_user.garden_id
+    current_user.productivity += curr_plant.price
   end
 
   def plant_params 
 		params.require(:plant).permit(:ndex)
 	end
-
 end
