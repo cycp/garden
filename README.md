@@ -1,28 +1,29 @@
-PRODUCTIVITY SPROUT
+# PRODUCTIVITY SPROUT
 
-Team Members: 
+## Team Members: 
 
 Akash Gokul, Clara Park, Michelle Zhang, Shenelle Perera
 
 
-Demo Link: https://youtu.be/P4hunkj6F50
+## Demo Link:
 
+[https://youtu.be/P4hunkj6F50](https://youtu.be/P4hunkj6F50)
 
-Idea: 
+## Idea: 
 
 A productivity site that allows you to create beautiful gardens by spending time studying. You can cultivate your own garden or cultivate multiple community gardens to allow for more group productivity. 
 
 
-Models and Description:
+## Models and Description:
 
 •	User: has name, gardens (community and personal), and coins
 
 •	Garden: has a user, and plants
 
-•	Community:  has users and plants
+•	Community: has users and plants
 
 
-Features:
+## Features:
 
 •	Users can log in
 
@@ -35,13 +36,13 @@ Features:
 •	Users can earn coins from plants in their garden during work sessions
 
 
-Division of Labor:
+## Division of Labor:
 
-•	Akash: Plants and Garden, model and controller
+•	Akash: Plants model, controller, views
 
-•	Clara:
+•	Clara: User model, controller, views
 
-•	Michelle: Community Garden, model and controller
+•	Michelle: Fix small errors
 
-•	Shenelle:
+•	Shenelle: Garden model, controller, views
 
