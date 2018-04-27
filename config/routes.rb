@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   get 'plants/new', to: "plants#new"
   post 'plants/new', to: "plants#create"
+
+  get 'users/:id/garden', to: 'garden#show', as: 'garden'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

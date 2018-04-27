@@ -21,12 +21,15 @@ before_action :authenticate_user!
 
     def create
     	plant = Plant.create(plant_params)
-    	# plant.
+    	plant.garden = Garden.New
+    	plant.save!
+    	redirect_to user_path(current_user.id)
+
     end
 
     def plant_params 
 		params.require(:plant).permit(:ndex)
 	end
 
-end
+
 end

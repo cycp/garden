@@ -7550,3 +7550,4 @@ Migrating to RemoveTimeToGrowFromPlants (20180426224748)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[36mPlant Load (8.7ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" LIMIT ?[0m  [["LIMIT", 11]]
