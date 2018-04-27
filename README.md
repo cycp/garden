@@ -5,7 +5,7 @@ Team Members:
 Akash Gokul, Clara Park, Michelle Zhang, Shenelle Perera
 
 
-Demo Link:
+Demo Link: https://youtu.be/P4hunkj6F50
 
 
 Idea: 
