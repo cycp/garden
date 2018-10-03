@@ -21,8 +21,9 @@ before_action :authenticate_user!
 
   def create
   	plant = Plant.create(plant_params)
-  	plant.garden_id = current_user.garden
-    current_user.productivity += curr_plant.price
+    # plant.ndex = plant_params[:id]
+  	plant.garden_id = current_user.garden.id
+    # current_user.productivity += curr_plant.price
     current_user.time = plant_params[:amount]
   	plant.save!
   	redirect_to user_path(current_user.id)
